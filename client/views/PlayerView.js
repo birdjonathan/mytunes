@@ -16,18 +16,11 @@ var PlayerView = Backbone.View.extend({
 
   //event lilsteners can only be attached to child elements of el
 
-  initialize: function() {
-    // this.$el.on('ended', (function() {
-    //   this.model.trigger('ended');
-    // }).bind(this)
-    // );
-  },
-
   ended: function () {
     // this.trigger('ended', this);
     // dequeue this song
     this.model.dequeue();
-    debugger;
+
     // play next song  
     this.model.play();
   },
